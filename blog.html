@@ -11,6 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .blog-card-reads {
+      font-size: 0.75rem; color: var(--text-muted);
+      display: flex; align-items: center; gap: 0.75rem; margin-top: 0.75rem;
+    }
+    .blog-card-reads span { display: inline-flex; align-items: center; gap: 0.25rem; }
+  </style>
 </head>
 <body>
   <div id="progress-bar"></div>
@@ -45,132 +52,296 @@
     <div class="container">
       <div class="page-header">
         <h1>Blog</h1>
-        <p>Articles on AI, Machine Learning, LLMs, and cloud technologies &mdash; published on <a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Medium</a></p>
+        <p>Articles on AI, Machine Learning, and developer tools &mdash; published on
+          <a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Medium</a>
+        </p>
       </div>
 
       <div data-filter-group>
         <div class="filter-tabs">
           <button class="filter-tab active" data-filter="all">All</button>
-          <button class="filter-tab" data-filter="llm">LLM / Agents</button>
+          <button class="filter-tab" data-filter="genai">Generative AI</button>
           <button class="filter-tab" data-filter="ml">Machine Learning</button>
-          <button class="filter-tab" data-filter="cloud">Cloud</button>
           <button class="filter-tab" data-filter="tutorial">Tutorial</button>
+          <button class="filter-tab" data-filter="analytics">Analytics</button>
         </div>
 
         <div class="blog-grid">
 
-          <div class="blog-card" data-category="llm">
+          <!-- Fine-Tuning Gemma 2B -->
+          <div class="blog-card" data-category="genai">
             <div class="blog-card-body">
               <div class="blog-card-meta">
                 <span class="blog-date">Apr 2026</span>
-                <span class="blog-category">LLM / Agents</span>
+                <span class="blog-category">Generative AI</span>
               </div>
-              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Agentic AI with Google ADK: Building Multi-Agent Systems <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
-              <p>A deep dive into Google's Agent Development Kit for building collaborative, multi-step AI agents that can reason and act autonomously.</p>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                Fine-Tuning Gemma 2B on PubMedQA: Building a Medical Q&amp;A Assistant with LoRA, Keras Kinetic, and TPU
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>How I used a single Python decorator to fine-tune a medical question-answering model on a remote TPU — no Docker, no Kubernetes YAML, just Python.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 55</span>
+                <span><i class="fa-regular fa-hand-back-fist"></i> 1</span>
+              </div>
             </div>
           </div>
 
-          <div class="blog-card" data-category="llm">
-            <div class="blog-card-body">
-              <div class="blog-card-meta">
-                <span class="blog-date">Mar 2026</span>
-                <span class="blog-category">LLM / Agents</span>
-              </div>
-              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Fine-Tuning Gemini Models for Domain-Specific Tasks <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
-              <p>Step-by-step guide to supervised fine-tuning Gemini with your own datasets using Vertex AI's tuning API.</p>
-            </div>
-          </div>
-
-          <div class="blog-card" data-category="llm">
-            <div class="blog-card-body">
-              <div class="blog-card-meta">
-                <span class="blog-date">Feb 2026</span>
-                <span class="blog-category">LLM / Agents</span>
-              </div>
-              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Model Context Protocol (MCP): Extending LLM Capabilities <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
-              <p>What MCP is, how it works, and how to build custom MCP servers that give your LLM access to external tools and data.</p>
-            </div>
-          </div>
-
-          <div class="blog-card" data-category="ml">
-            <div class="blog-card-body">
-              <div class="blog-card-meta">
-                <span class="blog-date">Jan 2026</span>
-                <span class="blog-category">Machine Learning</span>
-              </div>
-              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">RAG vs Fine-Tuning: Choosing the Right Strategy <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
-              <p>A practical framework for deciding when to use retrieval-augmented generation vs. fine-tuning for your specific use case.</p>
-            </div>
-          </div>
-
-          <div class="blog-card" data-category="tutorial">
+          <!-- Science Simulator Hub -->
+          <div class="blog-card" data-category="genai">
             <div class="blog-card-body">
               <div class="blog-card-meta">
                 <span class="blog-date">Dec 2025</span>
-                <span class="blog-category">Tutorial</span>
+                <span class="blog-category">Generative AI</span>
               </div>
-              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">TensorBoard in Colab: Visualizing Training Metrics at Scale <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
-              <p>Setting up TensorBoard inside Google Colab and connecting it to your TensorFlow training runs for real-time visualization.</p>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                Building a Science Simulator Hub with Google AI Studio, Google Antigravity and Gemini 3
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>Making physics, sound, and systems thinking interactive for students.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 155</span>
+                <span><i class="fa-regular fa-hand-back-fist"></i> 1</span>
+              </div>
             </div>
           </div>
 
-          <div class="blog-card" data-category="cloud">
-            <div class="blog-card-body">
-              <div class="blog-card-meta">
-                <span class="blog-date">Nov 2025</span>
-                <span class="blog-category">Cloud</span>
-              </div>
-              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Deploying ML Models on Vertex AI: From Training to Endpoint <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
-              <p>End-to-end walkthrough of training a custom model with Vertex AI Training, registering it in Model Registry, and serving it behind a REST endpoint.</p>
-            </div>
-          </div>
-
-          <div class="blog-card" data-category="ml">
-            <div class="blog-card-body">
-              <div class="blog-card-meta">
-                <span class="blog-date">Oct 2025</span>
-                <span class="blog-category">Machine Learning</span>
-              </div>
-              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">ML Study Jam with Kaggle: A Complete Guide <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
-              <p>How to organize a Machine Learning Study Jam using Kaggle Learn, coordinate participants, and track progress across 8 weeks.</p>
-            </div>
-          </div>
-
-          <div class="blog-card" data-category="cloud">
-            <div class="blog-card-body">
-              <div class="blog-card-meta">
-                <span class="blog-date">Sep 2025</span>
-                <span class="blog-category">Cloud</span>
-              </div>
-              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">AWS SageMaker vs Vertex AI: A Practical Comparison for ML Teams <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
-              <p>Side-by-side comparison of two leading MLOps platforms across training, serving, pipelines, and cost considerations.</p>
-            </div>
-          </div>
-
+          <!-- Colab in VS Code -->
           <div class="blog-card" data-category="tutorial">
             <div class="blog-card-body">
               <div class="blog-card-meta">
-                <span class="blog-date">Aug 2025</span>
+                <span class="blog-date">Nov 2025</span>
                 <span class="blog-category">Tutorial</span>
               </div>
-              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Building a RAG Pipeline with LangChain and Vertex AI Vector Search <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
-              <p>Full tutorial on building a production-ready RAG system using LangChain orchestration with Google Cloud's Vector Search backend.</p>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                Connect to Google Colab Server in VS Code IDE with Colab Extension
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>If you're in data science, ML, or AI engineering you've likely juggled multiple notebook workflows. Here's how to connect Colab directly from VS Code.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 53</span>
+              </div>
             </div>
           </div>
 
-          <div class="blog-card" data-category="llm">
+          <!-- Gemini for Productivity -->
+          <div class="blog-card" data-category="genai">
             <div class="blog-card-body">
               <div class="blog-card-meta">
-                <span class="blog-date">Jul 2025</span>
-                <span class="blog-category">LLM / Agents</span>
+                <span class="blog-date">Jun 2025</span>
+                <span class="blog-category">Generative AI</span>
               </div>
-              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Prompt Engineering Best Practices for Gemini Pro <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
-              <p>Tested techniques including chain-of-thought, few-shot examples, and structured outputs for getting reliable results from Gemini models.</p>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                Gemini for Productivity: How Google's AI is Changing the Way We Work
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>In today's hyperconnected world, productivity isn't just about working harder — it's about working smarter with AI.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 51</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mermaid Flowcharts -->
+          <div class="blog-card" data-category="tutorial">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">May 2025</span>
+                <span class="blog-category">Tutorial</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                How to Use Gemini to Generate Flowcharts with Mermaid and Visualize Them in draw.io
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>Creating flowcharts can be tedious — especially when brainstorming or documenting workflows. With Gemini and Mermaid it's a breeze.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 14</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DeepSeek-R1 on AWS -->
+          <div class="blog-card" data-category="genai">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Feb 2025</span>
+                <span class="blog-category">Generative AI</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                Deploying DeepSeek-R1 Models on AWS: A Game Changer for Generative AI
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>In the fast-paced world of generative AI, efficiently deploying and scaling AI models is critical. Here's how to deploy DeepSeek-R1 on AWS.</p>
+            </div>
+          </div>
+
+          <!-- AWS PartyRock -->
+          <div class="blog-card" data-category="genai">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Nov 2023</span>
+                <span class="blog-category">Generative AI</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                Build your own Generative AI app in minutes with AWS PartyRock
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>Everyone is jumping on the Generative AI bandwagon. AWS PartyRock lets you build your own GenAI app without writing a single line of code.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 12</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TensorBoard PyTorch -->
+          <div class="blog-card" data-category="ml">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Feb 2023</span>
+                <span class="blog-category">Machine Learning</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                How to use TensorBoard with PyTorch
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>TensorBoard is an open-source tool for visualizing and understanding deep learning model performance. Here's how to hook it up with PyTorch.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 186</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Federated Learning -->
+          <div class="blog-card" data-category="ml">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Feb 2023</span>
+                <span class="blog-category">Machine Learning</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                Introduction to Federated Learning
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>An overview of federated learning — training ML models across decentralised devices without sharing raw data, a key technique for privacy-preserving AI.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 124</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MMM -->
+          <div class="blog-card" data-category="analytics">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Feb 2023</span>
+                <span class="blog-category">Analytics</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                Introduction to Marketing Mix Modelling (MMM) Part I
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>An overview of Marketing Mix Modelling — a statistical analysis technique used to understand the impact of various marketing tactics on sales.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 81</span>
+                <span><i class="fa-regular fa-hand-back-fist"></i> 1</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RGM -->
+          <div class="blog-card" data-category="analytics">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Jan 2023</span>
+                <span class="blog-category">Analytics</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                Drive Business Revenue via Revenue Growth Management (RGM)
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>Revenue growth management focuses on increasing revenue through the coordinated management of sales, pricing, promotions, and trade spend.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 55</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TensorBoard Colab -->
+          <div class="blog-card" data-category="tutorial">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">May 2019</span>
+                <span class="blog-category">Tutorial</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                How to use TensorBoard with Google Colab
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>One of the biggest hurdles for ML practitioners is visualizing training runs in Colab. This guide shows how to run TensorBoard directly inside a Colab notebook.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 223</span>
+                <span><i class="fa-regular fa-hand-back-fist"></i> 3</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anaconda zsh -->
+          <div class="blog-card" data-category="tutorial">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Oct 2019</span>
+                <span class="blog-category">Tutorial</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                Setting up Anaconda3 to work with macOS Catalina zsh shell
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>After updating to macOS Catalina, Anaconda3 stopped working with the new default zsh shell. Here's the fix.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 185</span>
+                <span><i class="fa-regular fa-hand-back-fist"></i> 4</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Uninstall Anaconda -->
+          <div class="blog-card" data-category="tutorial">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">May 2020</span>
+                <span class="blog-category">Tutorial</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                How to uninstall or remove Anaconda completely from macOS
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>Anaconda is widely used in data science but removing it completely from macOS can be tricky. This is the clean way to do it.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 64</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Virtual Environment -->
+          <div class="blog-card" data-category="tutorial">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Dec 2020</span>
+                <span class="blog-category">Tutorial</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">
+                Setting up virtual environment for Python with Anaconda
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.65rem; margin-left:0.3rem;"></i>
+              </a></h3>
+              <p>A virtual environment is an isolated copy of Python that maintains its own files and directories. Here's how to set one up with Anaconda.</p>
+              <div class="blog-card-reads">
+                <span><i class="fa-regular fa-eye"></i> 25</span>
+              </div>
             </div>
           </div>
 
         </div>
-      </div>
+      </div><!-- /filter-group -->
 
       <div style="margin-top:2rem; text-align:center;">
         <a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener" class="btn">

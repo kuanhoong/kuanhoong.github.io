@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trainings — Kuan Hoong</title>
+  <meta name="description" content="Training programmes and workshops delivered by Dr. Ts. Poo Kuan Hoong on AI, Machine Learning, Data Analytics, and R/Python." />
+  <link rel="icon" href="https://github.com/kuanhoong.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .training-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 1.25rem;
+      align-items: start;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .training-card:hover { transform: translateY(-3px); box-shadow: var(--card-shadow-hover); }
+    .training-icon {
+      width: 48px; height: 48px;
+      background: var(--tag-bg); color: var(--theme-color);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.35rem; flex-shrink: 0;
+    }
+    .training-content h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .training-meta {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.625rem;
+    }
+    .training-duration {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      font-size: 0.78rem; font-weight: 600; font-family: monospace;
+      background: var(--bg-secondary); color: var(--text-muted);
+      padding: 0.2rem 0.6rem; border-radius: 5px; border: 1px solid var(--border-color);
+    }
+    .training-content p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
+    .trainings-list { display: flex; flex-direction: column; gap: 1rem; }
+
+    .enquire-banner {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+    .enquire-banner h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .enquire-banner p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem; }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">Kuan<span>Hoong</span></a>
+    <ul class="navbar-nav">
+      <li><a href="index.html">About</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="trainings.html" class="active">Trainings</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <div class="navbar-controls">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span id="theme-icon">🌙</span></button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="trainings.html">Trainings</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>Trainings</h1>
+        <p>Workshops and training programmes delivered on AI, Machine Learning, Data Analytics, and programming</p>
+      </div>
+
+      <div data-filter-group>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="ai">AI / ML</button>
+          <button class="filter-tab" data-filter="python">Python</button>
+          <button class="filter-tab" data-filter="r">R Programming</button>
+          <button class="filter-tab" data-filter="data">Data Analytics</button>
+        </div>
+
+        <div class="trainings-list">
+
+          <div class="training-card" data-category="data">
+            <div class="training-icon"><i class="fa-solid fa-table"></i></div>
+            <div class="training-content">
+              <h3>Introduction to Power Query and Power Pivot</h3>
+              <div class="training-meta">
+                <span class="training-duration"><i class="fa-regular fa-clock"></i> 1 Day</span>
+                <span class="badge">Data Analytics</span>
+              </div>
+              <p>Hands-on introduction to Power Query for data transformation and Power Pivot for data modelling in Excel. Covers importing data from multiple sources, cleaning and shaping data with Power Query, and building powerful pivot tables and calculated measures with Power Pivot.</p>
+            </div>
+          </div>
+
+          <div class="training-card" data-category="r">
+            <div class="training-icon"><i class="fa-solid fa-chart-column"></i></div>
+            <div class="training-content">
+              <h3>A Gentle Introduction to Tidy Statistics in R</h3>
+              <div class="training-meta">
+                <span class="training-duration"><i class="fa-regular fa-clock"></i> 1 Day</span>
+                <span class="badge">R Programming</span>
+              </div>
+              <p>An accessible introduction to statistical analysis using the tidyverse in R. Covers foundational statistical concepts — descriptive statistics, hypothesis testing, and correlation — using modern tidy data principles and ggplot2 visualizations. Ideal for beginners with no prior R experience.</p>
+            </div>
+          </div>
+
+          <div class="training-card" data-category="r">
+            <div class="training-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <div class="training-content">
+              <h3>Data Analytics with R</h3>
+              <div class="training-meta">
+                <span class="training-duration"><i class="fa-regular fa-clock"></i> 2 Days</span>
+                <span class="badge">R Programming</span>
+                <span class="badge">Data Analytics</span>
+              </div>
+              <p>Comprehensive 2-day programme covering data wrangling with dplyr and tidyr, exploratory data analysis, visualization with ggplot2, and basic statistical modelling in R. Participants leave with hands-on experience analysing real-world datasets from import to insight.</p>
+            </div>
+          </div>
+
+          <div class="training-card" data-category="python">
+            <div class="training-icon"><i class="fa-brands fa-python"></i></div>
+            <div class="training-content">
+              <h3>Data Analytics and Machine Learning with Python</h3>
+              <div class="training-meta">
+                <span class="training-duration"><i class="fa-regular fa-clock"></i> 5 Days</span>
+                <span class="badge">Python</span>
+                <span class="badge">Machine Learning</span>
+              </div>
+              <p>Intensive 5-day bootcamp covering the full data analytics and ML workflow in Python. Topics include Python fundamentals, pandas and NumPy for data manipulation, Matplotlib and Seaborn for visualization, scikit-learn for machine learning (regression, classification, clustering), and model evaluation and deployment best practices.</p>
+            </div>
+          </div>
+
+          <div class="training-card" data-category="ai">
+            <div class="training-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="training-content">
+              <h3>Introduction to Artificial Intelligence</h3>
+              <div class="training-meta">
+                <span class="training-duration"><i class="fa-regular fa-clock"></i> 1 Day</span>
+                <span class="badge">AI / ML</span>
+              </div>
+              <p>A non-technical introduction to Artificial Intelligence for business professionals and decision-makers. Covers what AI is, key AI concepts (ML, deep learning, NLP, computer vision), current AI applications across industries, ethical considerations, and how organisations can start their AI journey.</p>
+            </div>
+          </div>
+
+          <div class="training-card" data-category="ai">
+            <div class="training-icon"><i class="fa-solid fa-industry"></i></div>
+            <div class="training-content">
+              <h3>Introduction to Industry Revolution 4.0 (IR 4.0) and Data Driven Organisation</h3>
+              <div class="training-meta">
+                <span class="training-duration"><i class="fa-regular fa-clock"></i> 1 Day</span>
+                <span class="badge">AI / ML</span>
+                <span class="badge">Data Analytics</span>
+              </div>
+              <p>An overview of the Fourth Industrial Revolution and its impact on businesses and the workforce. Covers IR 4.0 technologies (IoT, AI, Big Data, Cloud, Robotics), the concept of a data-driven organisation, and practical strategies for digital transformation and data adoption in the Malaysian context.</p>
+            </div>
+          </div>
+
+          <div class="training-card" data-category="r">
+            <div class="training-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="training-content">
+              <h3>Introduction to R</h3>
+              <div class="training-meta">
+                <span class="training-duration"><i class="fa-regular fa-clock"></i> 3 Days</span>
+                <span class="badge">R Programming</span>
+              </div>
+              <p>A structured 3-day introduction to R programming for data science. Covers R syntax and data types, importing and cleaning data, data transformation with dplyr, exploratory data analysis, and producing publication-quality visualizations with ggplot2. No prior programming experience required.</p>
+            </div>
+          </div>
+
+          <div class="training-card" data-category="r">
+            <div class="training-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="training-content">
+              <h3>Machine Learning with R</h3>
+              <div class="training-meta">
+                <span class="training-duration"><i class="fa-regular fa-clock"></i> 5 Days</span>
+                <span class="badge">R Programming</span>
+                <span class="badge">Machine Learning</span>
+              </div>
+              <p>An intensive 5-day programme covering machine learning theory and practical implementation in R. Topics include supervised learning (linear regression, logistic regression, decision trees, random forest, SVM), unsupervised learning (k-means, hierarchical clustering), model selection, cross-validation, and feature engineering.</p>
+            </div>
+          </div>
+
+          <div class="training-card" data-category="r">
+            <div class="training-icon"><i class="fa-solid fa-database"></i></div>
+            <div class="training-content">
+              <h3>Introduction to Big Data and R Programming</h3>
+              <div class="training-meta">
+                <span class="training-duration"><i class="fa-regular fa-clock"></i> 1 Day</span>
+                <span class="badge">R Programming</span>
+                <span class="badge">Data Analytics</span>
+              </div>
+              <p>An introductory overview of the Big Data landscape and how R can be used to work with large datasets. Covers Big Data concepts (Volume, Velocity, Variety), an introduction to Hadoop and Spark, and practical R tools for handling and analysing large-scale data.</p>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /filter-group -->
+
+      <!-- Enquiry Banner -->
+      <div class="enquire-banner">
+        <h3>Looking to upskill your team?</h3>
+        <p>All training programmes can be customised for corporate or institutional delivery. Get in touch to discuss your requirements.</p>
+        <a href="mailto:kuanhoong@gmail.com" class="btn">
+          <i class="fa-solid fa-paper-plane"></i> Enquire about a Training
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-social">
+        <a href="https://github.com/kuanhoong" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/kuanhoong" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://twitter.com/kuanhoong" target="_blank" rel="noopener" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:kuanhoong@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <div class="footer-copyright">&copy; 2026 Kuan Hoong &nbsp;·&nbsp; <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications — Kuan Hoong</title>
+  <meta name="description" content="Professional certifications by Kuan Hoong — AWS, Google Cloud, TensorFlow, and more." />
+  <link rel="icon" href="https://github.com/kuanhoong.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">Kuan<span>Hoong</span></a>
+    <ul class="navbar-nav">
+      <li><a href="index.html">About</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="certifications.html" class="active">Certifications</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <div class="navbar-controls">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span id="theme-icon">🌙</span></button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>Certifications</h1>
+        <p>Professional credentials across cloud platforms, AI/ML, and data engineering</p>
+      </div>
+
+      <div data-filter-group>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="aws">AWS</button>
+          <button class="filter-tab" data-filter="gcp">Google Cloud</button>
+          <button class="filter-tab" data-filter="ai">AI / ML</button>
+          <button class="filter-tab" data-filter="other">Other</button>
+        </div>
+
+        <div class="certs-grid">
+
+          <!-- AWS -->
+          <div class="cert-card" data-category="aws">
+            <div style="font-size:2.25rem;">☁️</div>
+            <div>
+              <div class="cert-provider">Amazon Web Services</div>
+              <div class="cert-name">AWS Certified Machine Learning – Specialty</div>
+            </div>
+            <div class="cert-year">2024</div>
+          </div>
+
+          <div class="cert-card" data-category="aws">
+            <div style="font-size:2.25rem;">☁️</div>
+            <div>
+              <div class="cert-provider">Amazon Web Services</div>
+              <div class="cert-name">AWS Certified Solutions Architect – Associate</div>
+            </div>
+            <div class="cert-year">2023</div>
+          </div>
+
+          <div class="cert-card" data-category="aws">
+            <div style="font-size:2.25rem;">☁️</div>
+            <div>
+              <div class="cert-provider">Amazon Web Services</div>
+              <div class="cert-name">AWS Certified Developer – Associate</div>
+            </div>
+            <div class="cert-year">2023</div>
+          </div>
+
+          <div class="cert-card" data-category="aws">
+            <div style="font-size:2.25rem;">☁️</div>
+            <div>
+              <div class="cert-provider">Amazon Web Services</div>
+              <div class="cert-name">AWS Certified Cloud Practitioner</div>
+            </div>
+            <div class="cert-year">2022</div>
+          </div>
+
+          <!-- GCP -->
+          <div class="cert-card" data-category="gcp">
+            <div style="font-size:2.25rem;">🌐</div>
+            <div>
+              <div class="cert-provider">Google Cloud</div>
+              <div class="cert-name">Professional Machine Learning Engineer</div>
+            </div>
+            <div class="cert-year">2024</div>
+          </div>
+
+          <div class="cert-card" data-category="gcp">
+            <div style="font-size:2.25rem;">🌐</div>
+            <div>
+              <div class="cert-provider">Google Cloud</div>
+              <div class="cert-name">Professional Data Engineer</div>
+            </div>
+            <div class="cert-year">2023</div>
+          </div>
+
+          <div class="cert-card" data-category="gcp">
+            <div style="font-size:2.25rem;">🌐</div>
+            <div>
+              <div class="cert-provider">Google Cloud</div>
+              <div class="cert-name">Associate Cloud Engineer</div>
+            </div>
+            <div class="cert-year">2022</div>
+          </div>
+
+          <div class="cert-card" data-category="gcp">
+            <div style="font-size:2.25rem;">🌐</div>
+            <div>
+              <div class="cert-provider">Google Cloud</div>
+              <div class="cert-name">Cloud Digital Leader</div>
+            </div>
+            <div class="cert-year">2022</div>
+          </div>
+
+          <!-- AI/ML -->
+          <div class="cert-card" data-category="ai">
+            <div style="font-size:2.25rem;">🧠</div>
+            <div>
+              <div class="cert-provider">TensorFlow</div>
+              <div class="cert-name">TensorFlow Developer Certificate</div>
+            </div>
+            <div class="cert-year">2023</div>
+          </div>
+
+          <div class="cert-card" data-category="ai">
+            <div style="font-size:2.25rem;">🧠</div>
+            <div>
+              <div class="cert-provider">DeepLearning.AI</div>
+              <div class="cert-name">Deep Learning Specialization</div>
+            </div>
+            <div class="cert-year">2021</div>
+          </div>
+
+          <div class="cert-card" data-category="ai">
+            <div style="font-size:2.25rem;">🧠</div>
+            <div>
+              <div class="cert-provider">DeepLearning.AI</div>
+              <div class="cert-name">Machine Learning Engineering for Production (MLOps)</div>
+            </div>
+            <div class="cert-year">2022</div>
+          </div>
+
+          <div class="cert-card" data-category="ai">
+            <div style="font-size:2.25rem;">🧠</div>
+            <div>
+              <div class="cert-provider">DeepLearning.AI</div>
+              <div class="cert-name">Natural Language Processing Specialization</div>
+            </div>
+            <div class="cert-year">2022</div>
+          </div>
+
+          <!-- Other -->
+          <div class="cert-card" data-category="other">
+            <div style="font-size:2.25rem;">📊</div>
+            <div>
+              <div class="cert-provider">Databricks</div>
+              <div class="cert-name">Databricks Certified Associate Developer for Apache Spark</div>
+            </div>
+            <div class="cert-year">2023</div>
+          </div>
+
+          <div class="cert-card" data-category="other">
+            <div style="font-size:2.25rem;">📊</div>
+            <div>
+              <div class="cert-provider">Microsoft</div>
+              <div class="cert-name">Azure AI Fundamentals (AI-900)</div>
+            </div>
+            <div class="cert-year">2023</div>
+          </div>
+
+          <div class="cert-card" data-category="other">
+            <div style="font-size:2.25rem;">📊</div>
+            <div>
+              <div class="cert-provider">Kaggle</div>
+              <div class="cert-name">Machine Learning &amp; Data Science — Competition Expert</div>
+            </div>
+            <div class="cert-year">2024</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="margin-top:2rem; padding:1.5rem; background:var(--bg-secondary); border-radius:12px; border:1px solid var(--border-color); text-align:center;">
+        <p style="font-size:0.9rem; color:var(--text-muted);">
+          <i class="fa-solid fa-certificate" style="color:var(--theme-color); margin-right:0.4rem;"></i>
+          Verified credentials available on <a href="https://www.credly.com" target="_blank" rel="noopener">Credly</a> and individual provider platforms.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-social">
+        <a href="https://github.com/kuanhoong" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/kuanhoong" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://twitter.com/kuanhoong" target="_blank" rel="noopener" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:kuanhoong@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <div class="footer-copyright">&copy; 2026 Kuan Hoong &nbsp;·&nbsp; <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

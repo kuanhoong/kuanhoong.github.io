@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Kuan Hoong</title>
+  <meta name="description" content="Articles by Kuan Hoong on AI, Machine Learning, LLMs, and cloud technologies." />
+  <link rel="icon" href="https://github.com/kuanhoong.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">Kuan<span>Hoong</span></a>
+    <ul class="navbar-nav">
+      <li><a href="index.html">About</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <div class="navbar-controls">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span id="theme-icon">🌙</span></button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>Blog</h1>
+        <p>Articles on AI, Machine Learning, LLMs, and cloud technologies &mdash; published on <a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Medium</a></p>
+      </div>
+
+      <div data-filter-group>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="llm">LLM / Agents</button>
+          <button class="filter-tab" data-filter="ml">Machine Learning</button>
+          <button class="filter-tab" data-filter="cloud">Cloud</button>
+          <button class="filter-tab" data-filter="tutorial">Tutorial</button>
+        </div>
+
+        <div class="blog-grid">
+
+          <div class="blog-card" data-category="llm">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Apr 2026</span>
+                <span class="blog-category">LLM / Agents</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Agentic AI with Google ADK: Building Multi-Agent Systems <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
+              <p>A deep dive into Google's Agent Development Kit for building collaborative, multi-step AI agents that can reason and act autonomously.</p>
+            </div>
+          </div>
+
+          <div class="blog-card" data-category="llm">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Mar 2026</span>
+                <span class="blog-category">LLM / Agents</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Fine-Tuning Gemini Models for Domain-Specific Tasks <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
+              <p>Step-by-step guide to supervised fine-tuning Gemini with your own datasets using Vertex AI's tuning API.</p>
+            </div>
+          </div>
+
+          <div class="blog-card" data-category="llm">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Feb 2026</span>
+                <span class="blog-category">LLM / Agents</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Model Context Protocol (MCP): Extending LLM Capabilities <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
+              <p>What MCP is, how it works, and how to build custom MCP servers that give your LLM access to external tools and data.</p>
+            </div>
+          </div>
+
+          <div class="blog-card" data-category="ml">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Jan 2026</span>
+                <span class="blog-category">Machine Learning</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">RAG vs Fine-Tuning: Choosing the Right Strategy <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
+              <p>A practical framework for deciding when to use retrieval-augmented generation vs. fine-tuning for your specific use case.</p>
+            </div>
+          </div>
+
+          <div class="blog-card" data-category="tutorial">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Dec 2025</span>
+                <span class="blog-category">Tutorial</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">TensorBoard in Colab: Visualizing Training Metrics at Scale <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
+              <p>Setting up TensorBoard inside Google Colab and connecting it to your TensorFlow training runs for real-time visualization.</p>
+            </div>
+          </div>
+
+          <div class="blog-card" data-category="cloud">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Nov 2025</span>
+                <span class="blog-category">Cloud</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Deploying ML Models on Vertex AI: From Training to Endpoint <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
+              <p>End-to-end walkthrough of training a custom model with Vertex AI Training, registering it in Model Registry, and serving it behind a REST endpoint.</p>
+            </div>
+          </div>
+
+          <div class="blog-card" data-category="ml">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Oct 2025</span>
+                <span class="blog-category">Machine Learning</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">ML Study Jam with Kaggle: A Complete Guide <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
+              <p>How to organize a Machine Learning Study Jam using Kaggle Learn, coordinate participants, and track progress across 8 weeks.</p>
+            </div>
+          </div>
+
+          <div class="blog-card" data-category="cloud">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Sep 2025</span>
+                <span class="blog-category">Cloud</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">AWS SageMaker vs Vertex AI: A Practical Comparison for ML Teams <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
+              <p>Side-by-side comparison of two leading MLOps platforms across training, serving, pipelines, and cost considerations.</p>
+            </div>
+          </div>
+
+          <div class="blog-card" data-category="tutorial">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Aug 2025</span>
+                <span class="blog-category">Tutorial</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Building a RAG Pipeline with LangChain and Vertex AI Vector Search <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
+              <p>Full tutorial on building a production-ready RAG system using LangChain orchestration with Google Cloud's Vector Search backend.</p>
+            </div>
+          </div>
+
+          <div class="blog-card" data-category="llm">
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-date">Jul 2025</span>
+                <span class="blog-category">LLM / Agents</span>
+              </div>
+              <h3><a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener">Prompt Engineering Best Practices for Gemini Pro <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i></a></h3>
+              <p>Tested techniques including chain-of-thought, few-shot examples, and structured outputs for getting reliable results from Gemini models.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="margin-top:2rem; text-align:center;">
+        <a href="https://medium.com/@kuanhoong" target="_blank" rel="noopener" class="btn">
+          <i class="fa-brands fa-medium"></i> Read more on Medium
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-social">
+        <a href="https://github.com/kuanhoong" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/kuanhoong" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://twitter.com/kuanhoong" target="_blank" rel="noopener" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:kuanhoong@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <div class="footer-copyright">&copy; 2026 Kuan Hoong &nbsp;·&nbsp; <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

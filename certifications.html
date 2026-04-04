@@ -4,13 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Certifications — Kuan Hoong</title>
-  <meta name="description" content="Professional certifications by Kuan Hoong — AWS, Google Cloud, TensorFlow, and more." />
+  <meta name="description" content="Professional certifications by Kuan Hoong — Generative AI, Machine Learning, Data Science, and more." />
   <link rel="icon" href="https://github.com/kuanhoong.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .cert-card { position: relative; }
+    .cert-issued { font-size: 0.75rem; color: var(--text-muted); font-family: monospace; margin-top: auto; padding-top: 0.5rem; }
+    .cert-expiry { font-size: 0.72rem; color: var(--text-muted); }
+    .cert-icon { font-size: 1.75rem; flex-shrink: 0; }
+    .certs-grid { grid-template-columns: repeat(3, 1fr); }
+    .count-banner {
+      background: var(--bg-secondary); border: 1px solid var(--border-color);
+      border-radius: 12px; padding: 1.25rem 1.5rem;
+      display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;
+      margin-bottom: 1.75rem;
+    }
+    .count-item { text-align: center; }
+    .count-num { font-size: 1.75rem; font-weight: 800; color: var(--theme-color); line-height: 1; }
+    .count-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; }
+    @media (max-width: 768px) { .certs-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .certs-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
   <div id="progress-bar"></div>
@@ -45,168 +63,460 @@
     <div class="container">
       <div class="page-header">
         <h1>Certifications</h1>
-        <p>Professional credentials across cloud platforms, AI/ML, and data engineering</p>
+        <p>Licenses &amp; professional credentials across AI, data science, cloud, and leadership</p>
+      </div>
+
+      <!-- Stats banner -->
+      <div class="count-banner">
+        <div class="count-item"><div class="count-num">40+</div><div class="count-label">Total Credentials</div></div>
+        <div class="count-item"><div class="count-num">12</div><div class="count-label">Generative AI</div></div>
+        <div class="count-item"><div class="count-num">16</div><div class="count-label">Data Science / ML</div></div>
+        <div class="count-item"><div class="count-num">7</div><div class="count-label">R &amp; Tools</div></div>
+        <div class="count-item"><div class="count-num">5</div><div class="count-label">Leadership</div></div>
       </div>
 
       <div data-filter-group>
         <div class="filter-tabs">
           <button class="filter-tab active" data-filter="all">All</button>
-          <button class="filter-tab" data-filter="aws">AWS</button>
-          <button class="filter-tab" data-filter="gcp">Google Cloud</button>
-          <button class="filter-tab" data-filter="ai">AI / ML</button>
-          <button class="filter-tab" data-filter="other">Other</button>
+          <button class="filter-tab" data-filter="genai">Generative AI</button>
+          <button class="filter-tab" data-filter="ml">Machine Learning</button>
+          <button class="filter-tab" data-filter="ds">Data Science</button>
+          <button class="filter-tab" data-filter="r">R &amp; Tools</button>
+          <button class="filter-tab" data-filter="leadership">Leadership</button>
         </div>
 
         <div class="certs-grid">
 
-          <!-- AWS -->
-          <div class="cert-card" data-category="aws">
-            <div style="font-size:2.25rem;">☁️</div>
+          <!-- ===== GENERATIVE AI ===== -->
+          <div class="cert-card" data-category="genai">
+            <div class="cert-icon">🎓</div>
             <div>
-              <div class="cert-provider">Amazon Web Services</div>
-              <div class="cert-name">AWS Certified Machine Learning – Specialty</div>
+              <div class="cert-provider">Google for Education</div>
+              <div class="cert-name">Gemini Certified Educator</div>
             </div>
-            <div class="cert-year">2024</div>
+            <div class="cert-issued">Dec 2025 <span class="cert-expiry">· Expires Dec 2028</span></div>
           </div>
 
-          <div class="cert-card" data-category="aws">
-            <div style="font-size:2.25rem;">☁️</div>
+          <div class="cert-card" data-category="genai">
+            <div class="cert-icon">🧠</div>
             <div>
-              <div class="cert-provider">Amazon Web Services</div>
-              <div class="cert-name">AWS Certified Solutions Architect – Associate</div>
+              <div class="cert-provider">Google</div>
+              <div class="cert-name">Generative AI Leader Certification</div>
             </div>
-            <div class="cert-year">2023</div>
+            <div class="cert-issued">Dec 2025 <span class="cert-expiry">· Expires Dec 2028</span></div>
           </div>
 
-          <div class="cert-card" data-category="aws">
-            <div style="font-size:2.25rem;">☁️</div>
+          <div class="cert-card" data-category="genai">
+            <div class="cert-icon">🔌</div>
             <div>
-              <div class="cert-provider">Amazon Web Services</div>
-              <div class="cert-name">AWS Certified Developer – Associate</div>
+              <div class="cert-provider">Fractal Analytics</div>
+              <div class="cert-name">Model Context Protocol (MCP) Mastery</div>
             </div>
-            <div class="cert-year">2023</div>
+            <div class="cert-issued">Nov 2025</div>
           </div>
 
-          <div class="cert-card" data-category="aws">
-            <div style="font-size:2.25rem;">☁️</div>
-            <div>
-              <div class="cert-provider">Amazon Web Services</div>
-              <div class="cert-name">AWS Certified Cloud Practitioner</div>
-            </div>
-            <div class="cert-year">2022</div>
-          </div>
-
-          <!-- GCP -->
-          <div class="cert-card" data-category="gcp">
-            <div style="font-size:2.25rem;">🌐</div>
+          <div class="cert-card" data-category="genai">
+            <div class="cert-icon">☁️</div>
             <div>
               <div class="cert-provider">Google Cloud</div>
-              <div class="cert-name">Professional Machine Learning Engineer</div>
+              <div class="cert-name">Introduction to Generative AI</div>
             </div>
-            <div class="cert-year">2024</div>
+            <div class="cert-issued">Jul 2025</div>
           </div>
 
-          <div class="cert-card" data-category="gcp">
-            <div style="font-size:2.25rem;">🌐</div>
-            <div>
-              <div class="cert-provider">Google Cloud</div>
-              <div class="cert-name">Professional Data Engineer</div>
-            </div>
-            <div class="cert-year">2023</div>
-          </div>
-
-          <div class="cert-card" data-category="gcp">
-            <div style="font-size:2.25rem;">🌐</div>
-            <div>
-              <div class="cert-provider">Google Cloud</div>
-              <div class="cert-name">Associate Cloud Engineer</div>
-            </div>
-            <div class="cert-year">2022</div>
-          </div>
-
-          <div class="cert-card" data-category="gcp">
-            <div style="font-size:2.25rem;">🌐</div>
-            <div>
-              <div class="cert-provider">Google Cloud</div>
-              <div class="cert-name">Cloud Digital Leader</div>
-            </div>
-            <div class="cert-year">2022</div>
-          </div>
-
-          <!-- AI/ML -->
-          <div class="cert-card" data-category="ai">
-            <div style="font-size:2.25rem;">🧠</div>
-            <div>
-              <div class="cert-provider">TensorFlow</div>
-              <div class="cert-name">TensorFlow Developer Certificate</div>
-            </div>
-            <div class="cert-year">2023</div>
-          </div>
-
-          <div class="cert-card" data-category="ai">
-            <div style="font-size:2.25rem;">🧠</div>
+          <div class="cert-card" data-category="genai">
+            <div class="cert-icon">🤖</div>
             <div>
               <div class="cert-provider">DeepLearning.AI</div>
-              <div class="cert-name">Deep Learning Specialization</div>
+              <div class="cert-name">AI For Everyone</div>
             </div>
-            <div class="cert-year">2021</div>
+            <div class="cert-issued">Jul 2025</div>
           </div>
 
-          <div class="cert-card" data-category="ai">
-            <div style="font-size:2.25rem;">🧠</div>
+          <div class="cert-card" data-category="genai">
+            <div class="cert-icon">🎓</div>
+            <div>
+              <div class="cert-provider">Duke University</div>
+              <div class="cert-name">Introduction to Generative AI</div>
+            </div>
+            <div class="cert-issued">Jun 2025</div>
+          </div>
+
+          <div class="cert-card" data-category="genai">
+            <div class="cert-icon">💼</div>
+            <div>
+              <div class="cert-provider">LinkedIn</div>
+              <div class="cert-name">Generative AI for Business Leaders</div>
+            </div>
+            <div class="cert-issued">Jun 2025</div>
+          </div>
+
+          <div class="cert-card" data-category="genai">
+            <div class="cert-icon">☁️</div>
+            <div>
+              <div class="cert-provider">Amazon Web Services</div>
+              <div class="cert-name">Fundamentals of Generative AI for Beginners</div>
+            </div>
+            <div class="cert-issued">Jun 2025</div>
+          </div>
+
+          <div class="cert-card" data-category="genai">
+            <div class="cert-icon">📖</div>
+            <div>
+              <div class="cert-provider">Coursera · Roche</div>
+              <div class="cert-name">Gen AI Upskilling for All Roche</div>
+            </div>
+            <div class="cert-issued">May 2025</div>
+          </div>
+
+          <div class="cert-card" data-category="genai">
+            <div class="cert-icon">✨</div>
+            <div>
+              <div class="cert-provider">Google</div>
+              <div class="cert-name">Google AI Essentials</div>
+            </div>
+            <div class="cert-issued">May 2025</div>
+          </div>
+
+          <div class="cert-card" data-category="genai">
+            <div class="cert-icon">🤖</div>
             <div>
               <div class="cert-provider">DeepLearning.AI</div>
-              <div class="cert-name">Machine Learning Engineering for Production (MLOps)</div>
+              <div class="cert-name">Generative AI for Everyone</div>
             </div>
-            <div class="cert-year">2022</div>
+            <div class="cert-issued">May 2025</div>
           </div>
 
-          <div class="cert-card" data-category="ai">
-            <div style="font-size:2.25rem;">🧠</div>
+          <div class="cert-card" data-category="genai">
+            <div class="cert-icon">💬</div>
             <div>
-              <div class="cert-provider">DeepLearning.AI</div>
-              <div class="cert-name">Natural Language Processing Specialization</div>
+              <div class="cert-provider">Google</div>
+              <div class="cert-name">Google Prompting Essentials</div>
             </div>
-            <div class="cert-year">2022</div>
+            <div class="cert-issued">Apr 2025</div>
           </div>
 
-          <!-- Other -->
-          <div class="cert-card" data-category="other">
-            <div style="font-size:2.25rem;">📊</div>
+          <!-- ===== MACHINE LEARNING / CLOUD ===== -->
+          <div class="cert-card" data-category="ml">
+            <div class="cert-icon">☁️</div>
             <div>
-              <div class="cert-provider">Databricks</div>
-              <div class="cert-name">Databricks Certified Associate Developer for Apache Spark</div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Using TensorFlow with Amazon SageMaker</div>
             </div>
-            <div class="cert-year">2023</div>
+            <div class="cert-issued">Jul 2020</div>
           </div>
 
-          <div class="cert-card" data-category="other">
-            <div style="font-size:2.25rem;">📊</div>
+          <div class="cert-card" data-category="ml">
+            <div class="cert-icon">☁️</div>
             <div>
-              <div class="cert-provider">Microsoft</div>
-              <div class="cert-name">Azure AI Fundamentals (AI-900)</div>
+              <div class="cert-provider">LinkedIn</div>
+              <div class="cert-name">AWS Machine Learning by Example</div>
             </div>
-            <div class="cert-year">2023</div>
+            <div class="cert-issued">Jul 2020</div>
           </div>
 
-          <div class="cert-card" data-category="other">
-            <div style="font-size:2.25rem;">📊</div>
+          <div class="cert-card" data-category="ml">
+            <div class="cert-icon">📊</div>
             <div>
-              <div class="cert-provider">Kaggle</div>
-              <div class="cert-name">Machine Learning &amp; Data Science — Competition Expert</div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Business Analytics Specialization</div>
             </div>
-            <div class="cert-year">2024</div>
+            <div class="cert-issued">Oct 2016</div>
+          </div>
+
+          <div class="cert-card" data-category="ml">
+            <div class="cert-icon">📊</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Accounting Analytics</div>
+            </div>
+            <div class="cert-issued">Oct 2016</div>
+          </div>
+
+          <div class="cert-card" data-category="ml">
+            <div class="cert-icon">👥</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">People Analytics</div>
+            </div>
+            <div class="cert-issued">Jul 2016</div>
+          </div>
+
+          <div class="cert-card" data-category="ml">
+            <div class="cert-icon">🤖</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Machine Learning</div>
+            </div>
+            <div class="cert-issued">Jun 2016</div>
+          </div>
+
+          <div class="cert-card" data-category="ml">
+            <div class="cert-icon">⚙️</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Operations Analytics</div>
+            </div>
+            <div class="cert-issued">Jun 2016</div>
+          </div>
+
+          <div class="cert-card" data-category="ml">
+            <div class="cert-icon">🛍️</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Customer Analytics</div>
+            </div>
+            <div class="cert-issued">Jun 2016</div>
+          </div>
+
+          <!-- ===== DATA SCIENCE ===== -->
+          <div class="cert-card" data-category="ds">
+            <div class="cert-icon">🏆</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Data Science Specialization</div>
+            </div>
+            <div class="cert-issued">Apr 2016</div>
+          </div>
+
+          <div class="cert-card" data-category="ds">
+            <div class="cert-icon">🎯</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Data Science Capstone</div>
+            </div>
+            <div class="cert-issued">Apr 2016</div>
+          </div>
+
+          <div class="cert-card" data-category="ds">
+            <div class="cert-icon">📦</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Developing Data Products</div>
+            </div>
+            <div class="cert-issued">Jan 2016</div>
+          </div>
+
+          <div class="cert-card" data-category="ds">
+            <div class="cert-icon">🤖</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Practical Machine Learning</div>
+            </div>
+            <div class="cert-issued">Jan 2016</div>
+          </div>
+
+          <div class="cert-card" data-category="ds">
+            <div class="cert-icon">📈</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Regression Models</div>
+            </div>
+            <div class="cert-issued">Nov 2015</div>
+          </div>
+
+          <div class="cert-card" data-category="ds">
+            <div class="cert-icon">📐</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Statistical Inference</div>
+            </div>
+            <div class="cert-issued">Aug 2015</div>
+          </div>
+
+          <div class="cert-card" data-category="ds">
+            <div class="cert-icon">🔬</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Reproducible Research</div>
+            </div>
+            <div class="cert-issued">Aug 2015</div>
+          </div>
+
+          <div class="cert-card" data-category="ds">
+            <div class="cert-icon">🔍</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Exploratory Data Analysis</div>
+            </div>
+            <div class="cert-issued">Aug 2015</div>
+          </div>
+
+          <!-- ===== R & TOOLS ===== -->
+          <div class="cert-card" data-category="r">
+            <div class="cert-icon">📊</div>
+            <div>
+              <div class="cert-provider">LinkedIn</div>
+              <div class="cert-name">Learning the R Tidyverse</div>
+            </div>
+            <div class="cert-issued">Oct 2020</div>
+          </div>
+
+          <div class="cert-card" data-category="r">
+            <div class="cert-icon">🐍</div>
+            <div>
+              <div class="cert-provider">DataCamp</div>
+              <div class="cert-name">Intro to Python for Data Science</div>
+            </div>
+            <div class="cert-issued"></div>
+          </div>
+
+          <div class="cert-card" data-category="r">
+            <div class="cert-icon">🧹</div>
+            <div>
+              <div class="cert-provider">DataCamp</div>
+              <div class="cert-name">Cleaning Data in R</div>
+            </div>
+            <div class="cert-issued"></div>
+          </div>
+
+          <div class="cert-card" data-category="r">
+            <div class="cert-icon">📥</div>
+            <div>
+              <div class="cert-provider">DataCamp</div>
+              <div class="cert-name">Importing Data into R</div>
+            </div>
+            <div class="cert-issued"></div>
+          </div>
+
+          <div class="cert-card" data-category="r">
+            <div class="cert-icon">📊</div>
+            <div>
+              <div class="cert-provider">DataCamp</div>
+              <div class="cert-name">Intermediate R</div>
+            </div>
+            <div class="cert-issued"></div>
+          </div>
+
+          <div class="cert-card" data-category="r">
+            <div class="cert-icon">📊</div>
+            <div>
+              <div class="cert-provider">DataCamp</div>
+              <div class="cert-name">Introduction to R</div>
+            </div>
+            <div class="cert-issued">Jun 2015</div>
+          </div>
+
+          <div class="cert-card" data-category="r">
+            <div class="cert-icon">📝</div>
+            <div>
+              <div class="cert-provider">DataCamp</div>
+              <div class="cert-name">Reporting with R Markdown</div>
+            </div>
+            <div class="cert-issued"></div>
+          </div>
+
+          <div class="cert-card" data-category="r">
+            <div class="cert-icon">📊</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">R Programming</div>
+            </div>
+            <div class="cert-issued">Jun 2015</div>
+          </div>
+
+          <div class="cert-card" data-category="r">
+            <div class="cert-icon">🧰</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">The Data Scientist's Toolbox</div>
+            </div>
+            <div class="cert-issued">Jun 2015</div>
+          </div>
+
+          <div class="cert-card" data-category="r">
+            <div class="cert-icon">🧹</div>
+            <div>
+              <div class="cert-provider">Coursera</div>
+              <div class="cert-name">Getting and Cleaning Data</div>
+            </div>
+            <div class="cert-issued">Jun 2015</div>
+          </div>
+
+          <div class="cert-card" data-category="r">
+            <div class="cert-icon">📋</div>
+            <div>
+              <div class="cert-provider">Lynda.com</div>
+              <div class="cert-name">Excel 2016: Macros in Depth</div>
+            </div>
+            <div class="cert-issued">Nov 2016</div>
+          </div>
+
+          <!-- ===== LEADERSHIP / PROFESSIONAL ===== -->
+          <div class="cert-card" data-category="leadership">
+            <div class="cert-icon">🏅</div>
+            <div>
+              <div class="cert-provider">BAT</div>
+              <div class="cert-name">7 Essential Learnings</div>
+            </div>
+            <div class="cert-issued">Jul 2023</div>
+          </div>
+
+          <div class="cert-card" data-category="leadership">
+            <div class="cert-icon">💡</div>
+            <div>
+              <div class="cert-provider">LinkedIn</div>
+              <div class="cert-name">How to Innovate and Stay Relevant in Times of Change and Uncertainty</div>
+            </div>
+            <div class="cert-issued">Apr 2023</div>
+          </div>
+
+          <div class="cert-card" data-category="leadership">
+            <div class="cert-icon">📢</div>
+            <div>
+              <div class="cert-provider">LinkedIn</div>
+              <div class="cert-name">Crisis Communication</div>
+            </div>
+            <div class="cert-issued">May 2022</div>
+          </div>
+
+          <div class="cert-card" data-category="leadership">
+            <div class="cert-icon">🧩</div>
+            <div>
+              <div class="cert-provider">LinkedIn</div>
+              <div class="cert-name">Dan Ariely on Making Decisions</div>
+            </div>
+            <div class="cert-issued">May 2022</div>
+          </div>
+
+          <div class="cert-card" data-category="leadership">
+            <div class="cert-icon">🗣️</div>
+            <div>
+              <div class="cert-provider">LinkedIn</div>
+              <div class="cert-name">Interpersonal Communication</div>
+            </div>
+            <div class="cert-issued">May 2022</div>
+          </div>
+
+          <div class="cert-card" data-category="leadership">
+            <div class="cert-icon">🚀</div>
+            <div>
+              <div class="cert-provider">LinkedIn</div>
+              <div class="cert-name">Leading without Formal Authority</div>
+            </div>
+            <div class="cert-issued">Jul 2020</div>
+          </div>
+
+          <div class="cert-card" data-category="leadership">
+            <div class="cert-icon">📋</div>
+            <div>
+              <div class="cert-provider">UCI Extension</div>
+              <div class="cert-name">Initiating and Planning Projects</div>
+            </div>
+            <div class="cert-issued">Jul 2020</div>
           </div>
 
         </div>
-      </div>
+      </div><!-- /filter-group -->
 
-      <div style="margin-top:2rem; padding:1.5rem; background:var(--bg-secondary); border-radius:12px; border:1px solid var(--border-color); text-align:center;">
+      <div style="margin-top:2rem; padding:1.25rem; background:var(--bg-secondary); border-radius:12px; border:1px solid var(--border-color); text-align:center;">
         <p style="font-size:0.9rem; color:var(--text-muted);">
-          <i class="fa-solid fa-certificate" style="color:var(--theme-color); margin-right:0.4rem;"></i>
-          Verified credentials available on <a href="https://www.credly.com" target="_blank" rel="noopener">Credly</a> and individual provider platforms.
+          <i class="fa-brands fa-linkedin" style="color:var(--theme-color); margin-right:0.4rem;"></i>
+          Full list of verified credentials available on
+          <a href="https://www.linkedin.com/in/kuanhoong/details/certifications/" target="_blank" rel="noopener"><strong>LinkedIn</strong></a>.
         </p>
       </div>
+
     </div>
   </main>
 

@@ -4,13 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Talks & Slides — Kuan Hoong</title>
-  <meta name="description" content="Conference talks, workshops, and presentations by Kuan Hoong on AI, Machine Learning, and Google Cloud." />
+  <meta name="description" content="Conference talks, workshops, keynotes, and judging engagements by Dr. Ts. Poo Kuan Hoong on AI, Machine Learning, and Google Cloud." />
   <link rel="icon" href="https://github.com/kuanhoong.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .attendee-badge {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      font-size: 0.75rem; font-weight: 600; font-family: monospace;
+      background: var(--bg-secondary); color: var(--text-muted);
+      padding: 0.15rem 0.55rem; border-radius: 5px;
+      border: 1px solid var(--border-color);
+    }
+    .tag-pill {
+      display: inline-flex; align-items: center;
+      font-size: 0.72rem; font-weight: 600;
+      background: var(--tag-bg); color: var(--tag-color);
+      padding: 0.15rem 0.55rem; border-radius: 4px;
+    }
+    .talk-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
+  </style>
 </head>
 <body>
   <div id="progress-bar"></div>
@@ -20,6 +36,8 @@
     <ul class="navbar-nav">
       <li><a href="index.html">About</a></li>
       <li><a href="talks.html" class="active">Talks</a></li>
+      <li><a href="podcast.html">Podcast</a></li>
+      <li><a href="videos.html">Videos</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="cv.html">CV</a></li>
       <li><a href="certifications.html">Certifications</a></li>
@@ -49,211 +67,330 @@
     <div class="container">
       <div class="page-header">
         <h1>Talks &amp; Slides</h1>
-        <p>Conference presentations, workshops, and keynotes on AI, ML, and cloud technologies</p>
+        <p>Conference presentations, workshops, keynotes, and judging engagements on AI, ML, and Google Cloud</p>
       </div>
 
-      <!-- Filter tabs -->
       <div data-filter-group>
         <div class="filter-tabs">
           <button class="filter-tab active" data-filter="all">All</button>
-          <button class="filter-tab" data-filter="ai">AI / LLM</button>
+          <button class="filter-tab" data-filter="ai">AI / Agents</button>
           <button class="filter-tab" data-filter="ml">Machine Learning</button>
           <button class="filter-tab" data-filter="cloud">Cloud</button>
+          <button class="filter-tab" data-filter="judge">Judge / Panel</button>
           <button class="filter-tab" data-filter="community">Community</button>
         </div>
 
         <div class="talks-list">
 
-          <div class="talk-card" data-category="ai">
-            <div class="talk-date-col">
-              <div class="talk-year">2026</div>
-              <div class="talk-month">Apr</div>
-            </div>
-            <div class="talk-content">
-              <h3>Building Agentic AI Systems with Google Agent Development Kit (ADK)</h3>
-              <div class="talk-event">Google I/O Extended Malaysia 2026</div>
-              <div class="talk-meta">
-                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Kuala Lumpur, Malaysia</span>
-                <div class="talk-links">
-                  <a href="https://github.com/kuanhoong/adk" target="_blank" rel="noopener" class="talk-link"><i class="fa-brands fa-github"></i> Code</a>
-                  <a href="#" class="talk-link"><i class="fa-regular fa-file-powerpoint"></i> Slides</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <!-- Mar 2026 — Vibe Coding Singapore -->
           <div class="talk-card" data-category="ai">
             <div class="talk-date-col">
               <div class="talk-year">2026</div>
               <div class="talk-month">Mar</div>
             </div>
             <div class="talk-content">
-              <h3>Model Context Protocol (MCP): The Missing Link for AI Integrations</h3>
-              <div class="talk-event">PyCon MY 2026</div>
+              <h3>Skills: The New Superpower for Vibe Coding with Google Antigravity</h3>
+              <div class="talk-event">Public Speaking · Singapore</div>
               <div class="talk-meta">
-                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Kuala Lumpur, Malaysia</span>
-                <div class="talk-links">
-                  <a href="https://github.com/kuanhoong/mcp" target="_blank" rel="noopener" class="talk-link"><i class="fa-brands fa-github"></i> Code</a>
-                  <a href="#" class="talk-link"><i class="fa-regular fa-file-powerpoint"></i> Slides</a>
-                </div>
+                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Singapore</span>
+                <span class="attendee-badge"><i class="fa-solid fa-users"></i> 210 attendees</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.6;">
+                AI-assisted development is unlocking a new style of building software — often called vibe coding — where ideas flow quickly from thought to implementation. While tools like Google Antigravity accelerate generation, the real multiplier of performance is skills.
+              </p>
+              <div class="talk-tags">
+                <span class="tag-pill">AI Studio</span>
+                <span class="tag-pill">Build with AI</span>
+                <span class="tag-pill">AI Agents</span>
+                <span class="tag-pill">Gemini CLI</span>
               </div>
             </div>
           </div>
 
+          <!-- Mar 2026 — Judge Gemini Hackathon -->
+          <div class="talk-card" data-category="judge">
+            <div class="talk-date-col">
+              <div class="talk-year">2026</div>
+              <div class="talk-month">Mar</div>
+            </div>
+            <div class="talk-content">
+              <h3>[Judge] Build with AI: Gemini Hackathon with Google DeepMind</h3>
+              <div class="talk-event">Hackathon Judge · Kuala Lumpur, Malaysia</div>
+              <div class="talk-meta">
+                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Kuala Lumpur, Malaysia</span>
+                <span class="attendee-badge"><i class="fa-solid fa-users"></i> 170 attendees</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.6;">
+                Served as judge at the Build with AI: Gemini Hackathon — a full-day event focused on building real-world applications using Google's latest AI technologies, specifically Gemini models and Google AI Studio.
+              </p>
+              <div class="talk-tags">
+                <span class="tag-pill">AI - Gemini</span>
+                <span class="tag-pill">Google Cloud</span>
+                <span class="tag-pill">Build with AI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dec 2025 — A2A George Town DevFest -->
+          <div class="talk-card" data-category="ai">
+            <div class="talk-date-col">
+              <div class="talk-year">2025</div>
+              <div class="talk-month">Dec</div>
+            </div>
+            <div class="talk-content">
+              <h3>Agent2Agent (A2A): A Beginner's Guide</h3>
+              <div class="talk-event">DevFest George Town 2025 · George Town, Malaysia</div>
+              <div class="talk-meta">
+                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> George Town, Penang, Malaysia</span>
+                <span class="attendee-badge"><i class="fa-solid fa-users"></i> 210 attendees</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.6;">
+                An introduction to the rapidly growing world of autonomous agents and their ability to collaborate, communicate, and solve problems together. Covers core concepts, underlying architectures, and real-world use cases for agent-to-agent interactions.
+              </p>
+              <div class="talk-tags">
+                <span class="tag-pill">AI Agents</span>
+                <span class="tag-pill">DevFest</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dec 2025 — ADK KL DevFest -->
+          <div class="talk-card" data-category="ai">
+            <div class="talk-date-col">
+              <div class="talk-year">2025</div>
+              <div class="talk-month">Dec</div>
+            </div>
+            <div class="talk-content">
+              <h3>Develop Multi-Agent Systems with Agent Development Kit (ADK)</h3>
+              <div class="talk-event">DevFest Kuala Lumpur 2025 · Kuala Lumpur, Malaysia</div>
+              <div class="talk-meta">
+                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Kuala Lumpur, Malaysia</span>
+                <span class="attendee-badge"><i class="fa-solid fa-users"></i> 685 attendees</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.6;">
+                Covers the fundamentals of Google's Agent Development Kit (ADK) and demonstrates how to build intelligent agents that collaborate to solve complex problems.
+              </p>
+              <div class="talk-tags">
+                <span class="tag-pill">ADK</span>
+                <span class="tag-pill">AI Agents</span>
+                <span class="tag-pill">DevFest</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nov 2025 — ADK Jakarta DevFest -->
+          <div class="talk-card" data-category="ai">
+            <div class="talk-date-col">
+              <div class="talk-year">2025</div>
+              <div class="talk-month">Nov</div>
+            </div>
+            <div class="talk-content">
+              <h3>Building Agent AI with Agent Development Kit (ADK)</h3>
+              <div class="talk-event">DevFest Jakarta 2025 · Jakarta, Indonesia</div>
+              <div class="talk-meta">
+                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Jakarta, Indonesia</span>
+                <span class="attendee-badge"><i class="fa-solid fa-users"></i> 2,500 attendees</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.6;">
+                An overview of using Google's Agent Development Kit (ADK) to build intelligent agents, presented at DevFest Jakarta 2025.
+              </p>
+              <div class="talk-tags">
+                <span class="tag-pill">ADK</span>
+                <span class="tag-pill">AI Agents</span>
+                <span class="tag-pill">DevFest</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nov 2025 — R Conference Keynote -->
           <div class="talk-card" data-category="ml">
             <div class="talk-date-col">
               <div class="talk-year">2025</div>
               <div class="talk-month">Nov</div>
             </div>
             <div class="talk-content">
-              <h3>RAG in Production: Lessons Learned from Real-World Deployments</h3>
-              <div class="talk-event">AWS Community Day Southeast Asia 2025</div>
+              <h3>Beyond tidyverse: R's Journey into the AI-Powered Future</h3>
+              <div class="talk-event">R Conference 2025 · Keynote</div>
               <div class="talk-meta">
-                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Singapore</span>
+                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Malaysia</span>
                 <div class="talk-links">
-                  <a href="#" class="talk-link"><i class="fa-regular fa-file-powerpoint"></i> Slides</a>
-                  <a href="#" class="talk-link"><i class="fa-brands fa-youtube"></i> Video</a>
+                  <a href="https://www.youtube.com/watch?v=fOrS1AkgFKU" target="_blank" rel="noopener" class="talk-link"><i class="fa-brands fa-youtube"></i> Video</a>
                 </div>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.6;">
+                Keynote on the evolution of R beyond the tidyverse — exploring how AI, LLMs, and generative tools are reshaping the R ecosystem and what it means for data scientists.
+              </p>
+              <div class="talk-tags">
+                <span class="tag-pill">R</span>
+                <span class="tag-pill">Keynote</span>
+                <span class="tag-pill">Machine Learning</span>
               </div>
             </div>
           </div>
 
-          <div class="talk-card" data-category="ml">
+          <!-- Aug 2025 — A2A Primer AIML Malaysia Meetup -->
+          <div class="talk-card" data-category="community">
+            <div class="talk-date-col">
+              <div class="talk-year">2025</div>
+              <div class="talk-month">Aug</div>
+            </div>
+            <div class="talk-content">
+              <h3>Agent2Agent (A2A) Protocol: A Primer</h3>
+              <div class="talk-event">AI &amp; ML Malaysia — 27th August Meetup</div>
+              <div class="talk-meta">
+                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Malaysia (Virtual)</span>
+                <div class="talk-links">
+                  <a href="https://www.youtube.com/watch?v=LRMsJjMPmVM" target="_blank" rel="noopener" class="talk-link"><i class="fa-brands fa-youtube"></i> Video</a>
+                </div>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.6;">
+                Introducing the Agent2Agent protocol for enabling communication between AI agents, with practical examples and architecture overview.
+              </p>
+              <div class="talk-tags">
+                <span class="tag-pill">AI Agents</span>
+                <span class="tag-pill">A2A</span>
+                <span class="tag-pill">Community</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sep 2025 — Google ADK Tutorial -->
+          <div class="talk-card" data-category="ai">
             <div class="talk-date-col">
               <div class="talk-year">2025</div>
               <div class="talk-month">Sep</div>
             </div>
             <div class="talk-content">
-              <h3>Machine Learning Study Jam with Kaggle: From Notebook to Competition</h3>
-              <div class="talk-event">Google Developer Student Clubs Malaysia Summit</div>
+              <h3>Build Your First AI Agent with Google's Agent Development Kit (ADK)</h3>
+              <div class="talk-event">Webinar / Tutorial</div>
               <div class="talk-meta">
-                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Malaysia</span>
+                <span class="talk-location"><i class="fa-solid fa-globe"></i> Online</span>
                 <div class="talk-links">
-                  <a href="https://github.com/kuanhoong/mlstudyjam" target="_blank" rel="noopener" class="talk-link"><i class="fa-brands fa-github"></i> Code</a>
-                  <a href="#" class="talk-link"><i class="fa-regular fa-file-powerpoint"></i> Slides</a>
+                  <a href="https://www.youtube.com/watch?v=vw4ewYan02Y" target="_blank" rel="noopener" class="talk-link"><i class="fa-brands fa-youtube"></i> Video</a>
+                  <a href="https://github.com/kuanhoong/adk" target="_blank" rel="noopener" class="talk-link"><i class="fa-brands fa-github"></i> Code</a>
                 </div>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.6;">
+                Beginner's guide to building autonomous AI agents that can perceive, reason, act, and learn using Google's Agent Development Kit.
+              </p>
+              <div class="talk-tags">
+                <span class="tag-pill">ADK</span>
+                <span class="tag-pill">AI Agents</span>
+                <span class="tag-pill">Tutorial</span>
               </div>
             </div>
           </div>
 
-          <div class="talk-card" data-category="cloud">
+          <!-- Oct 2025 — MCP Webinar -->
+          <div class="talk-card" data-category="ai">
             <div class="talk-date-col">
               <div class="talk-year">2025</div>
-              <div class="talk-month">Jul</div>
-            </div>
-            <div class="talk-content">
-              <h3>Deploying LLMs on Google Cloud: Vertex AI, Cloud Run &amp; Beyond</h3>
-              <div class="talk-event">Google Cloud Next '25 Extended Malaysia</div>
-              <div class="talk-meta">
-                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Kuala Lumpur, Malaysia</span>
-                <div class="talk-links">
-                  <a href="#" class="talk-link"><i class="fa-regular fa-file-powerpoint"></i> Slides</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="talk-card" data-category="ml">
-            <div class="talk-date-col">
-              <div class="talk-year">2025</div>
-              <div class="talk-month">May</div>
-            </div>
-            <div class="talk-content">
-              <h3>TensorBoard for ML Experiment Tracking: From Local to Cloud</h3>
-              <div class="talk-event">TensorFlow User Group Malaysia Meetup</div>
-              <div class="talk-meta">
-                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Kuala Lumpur, Malaysia</span>
-                <div class="talk-links">
-                  <a href="https://github.com/kuanhoong/tensorboard_colab" target="_blank" rel="noopener" class="talk-link"><i class="fa-brands fa-github"></i> Code</a>
-                  <a href="#" class="talk-link"><i class="fa-regular fa-file-powerpoint"></i> Slides</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="talk-card" data-category="community">
-            <div class="talk-date-col">
-              <div class="talk-year">2025</div>
-              <div class="talk-month">Mar</div>
-            </div>
-            <div class="talk-content">
-              <h3>Getting Started with AI/ML: A Roadmap for Beginners</h3>
-              <div class="talk-event">Google Developer Group Cloud KL — Community Kickoff</div>
-              <div class="talk-meta">
-                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Kuala Lumpur, Malaysia</span>
-                <div class="talk-links">
-                  <a href="#" class="talk-link"><i class="fa-regular fa-file-powerpoint"></i> Slides</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="talk-card" data-category="cloud">
-            <div class="talk-date-col">
-              <div class="talk-year">2024</div>
               <div class="talk-month">Oct</div>
             </div>
             <div class="talk-content">
-              <h3>Responsible AI in Healthcare: Challenges and Opportunities</h3>
-              <div class="talk-event">AWS Summit ASEAN 2024</div>
+              <h3>[Webinar] Build and Ship Your Own MCP Server and Client</h3>
+              <div class="talk-event">Webinar</div>
               <div class="talk-meta">
-                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Bangkok, Thailand</span>
+                <span class="talk-location"><i class="fa-solid fa-globe"></i> Online</span>
                 <div class="talk-links">
-                  <a href="#" class="talk-link"><i class="fa-regular fa-file-powerpoint"></i> Slides</a>
-                  <a href="#" class="talk-link"><i class="fa-brands fa-youtube"></i> Video</a>
+                  <a href="https://www.youtube.com/watch?v=tT3zTPxGzTg" target="_blank" rel="noopener" class="talk-link"><i class="fa-brands fa-youtube"></i> Video</a>
+                  <a href="https://github.com/kuanhoong/mcp" target="_blank" rel="noopener" class="talk-link"><i class="fa-brands fa-github"></i> Code</a>
                 </div>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.6;">
+                How to connect AI models like Claude, Gemini, or ChatGPT directly to real-world tools and data using the Model Context Protocol.
+              </p>
+              <div class="talk-tags">
+                <span class="tag-pill">MCP</span>
+                <span class="tag-pill">AI Agents</span>
+                <span class="tag-pill">Webinar</span>
               </div>
             </div>
           </div>
 
+          <!-- Dec 2024 — Agentic Coding AWS Kiro -->
           <div class="talk-card" data-category="ai">
             <div class="talk-date-col">
-              <div class="talk-year">2024</div>
-              <div class="talk-month">Jun</div>
+              <div class="talk-year">2025</div>
+              <div class="talk-month">Dec</div>
             </div>
             <div class="talk-content">
-              <h3>Hands-on with Gemini API: Multimodal AI for Developers</h3>
-              <div class="talk-event">Google I/O Extended Malaysia 2024</div>
+              <h3>Agentic Coding with AWS Kiro: From Vibe to Specs</h3>
+              <div class="talk-event">Talk / Demo</div>
               <div class="talk-meta">
-                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Kuala Lumpur, Malaysia</span>
+                <span class="talk-location"><i class="fa-solid fa-globe"></i> Online</span>
                 <div class="talk-links">
-                  <a href="#" class="talk-link"><i class="fa-regular fa-file-powerpoint"></i> Slides</a>
+                  <a href="https://www.youtube.com/watch?v=yMMYtcd-Q8o" target="_blank" rel="noopener" class="talk-link"><i class="fa-brands fa-youtube"></i> Video</a>
                 </div>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.6;">
+                Exploring vibe coding versus spec-driven development with AWS Kiro — demonstrating how agentic AI tools change the software development workflow.
+              </p>
+              <div class="talk-tags">
+                <span class="tag-pill">AWS Kiro</span>
+                <span class="tag-pill">Agentic Coding</span>
+                <span class="tag-pill">AI Agents</span>
               </div>
             </div>
           </div>
 
-          <div class="talk-card" data-category="ml">
-            <div class="talk-date-col">
-              <div class="talk-year">2024</div>
-              <div class="talk-month">Apr</div>
-            </div>
-            <div class="talk-content">
-              <h3>From Pandas to Production: Building Scalable ML Pipelines</h3>
-              <div class="talk-event">PyCon APAC 2024</div>
-              <div class="talk-meta">
-                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Tokyo, Japan</span>
-                <div class="talk-links">
-                  <a href="#" class="talk-link"><i class="fa-regular fa-file-powerpoint"></i> Slides</a>
-                  <a href="#" class="talk-link"><i class="fa-brands fa-youtube"></i> Video</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <!-- TEDx UTAR -->
           <div class="talk-card" data-category="community">
             <div class="talk-date-col">
               <div class="talk-year">2023</div>
-              <div class="talk-month">Nov</div>
+              <div class="talk-month"></div>
             </div>
             <div class="talk-content">
-              <h3>Building Your Career in AI: From Student to Industry Practitioner</h3>
-              <div class="talk-event">Malaysia Tech Week 2023</div>
+              <h3>TEDx UTAR — Speaker</h3>
+              <div class="talk-event">TEDx UTAR</div>
               <div class="talk-meta">
                 <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Kuala Lumpur, Malaysia</span>
                 <div class="talk-links">
-                  <a href="#" class="talk-link"><i class="fa-regular fa-file-powerpoint"></i> Slides</a>
+                  <a href="https://www.ted.com/tedx/events/57609" target="_blank" rel="noopener" class="talk-link"><i class="fa-solid fa-globe"></i> TEDx</a>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Astro Awani Panel -->
+          <div class="talk-card" data-category="community">
+            <div class="talk-date-col">
+              <div class="talk-year">2023</div>
+              <div class="talk-month">Feb</div>
+            </div>
+            <div class="talk-content">
+              <h3>Dialog Tiga Penjuru: ChatGPT vs Bard — Hilang Kerja? Malas Fikir?</h3>
+              <div class="talk-event">Astro Awani — TV Panel Discussion</div>
+              <div class="talk-meta">
+                <span class="talk-location"><i class="fa-solid fa-tv"></i> Astro Awani, Channel 501 · Malaysia</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.6;">
+                National TV discussion panel on the impact of ChatGPT and Bard on jobs and critical thinking, alongside Prof. Ts. Dr. Ahmad Zukarnain (UPM) and Prof. Zaharom Nain (University of Nottingham Malaysia).
+              </p>
+              <div class="talk-tags">
+                <span class="tag-pill">AI</span>
+                <span class="tag-pill">Panel</span>
+                <span class="tag-pill">Media</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PyCon MY 2019 Keynote -->
+          <div class="talk-card" data-category="ml">
+            <div class="talk-date-col">
+              <div class="talk-year">2019</div>
+              <div class="talk-month"></div>
+            </div>
+            <div class="talk-content">
+              <h3>PyCon Malaysia 2019 — Keynote Speaker</h3>
+              <div class="talk-event">PyCon Malaysia 2019</div>
+              <div class="talk-meta">
+                <span class="talk-location"><i class="fa-solid fa-location-dot"></i> Kuala Lumpur, Malaysia</span>
+              </div>
+              <div class="talk-tags">
+                <span class="tag-pill">Python</span>
+                <span class="tag-pill">Keynote</span>
+                <span class="tag-pill">Machine Learning</span>
               </div>
             </div>
           </div>

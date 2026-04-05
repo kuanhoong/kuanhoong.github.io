@@ -12,32 +12,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    .gallery-placeholder {
+    .gallery-item img {
       width: 100%;
-      background: var(--bg-secondary);
+      height: 100%;
+      object-fit: cover;
       border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      gap: 0.5rem;
+      display: block;
     }
-    .gallery-placeholder i { font-size: 1.75rem; opacity: 0.5; }
-    /* Masonry-style varying heights */
-    .gallery-placeholder:nth-child(1)  { height: 200px; }
-    .gallery-placeholder:nth-child(2)  { height: 260px; }
-    .gallery-placeholder:nth-child(3)  { height: 180px; }
-    .gallery-placeholder:nth-child(4)  { height: 230px; }
-    .gallery-placeholder:nth-child(5)  { height: 210px; }
-    .gallery-placeholder:nth-child(6)  { height: 170px; }
-    .gallery-placeholder:nth-child(7)  { height: 250px; }
-    .gallery-placeholder:nth-child(8)  { height: 190px; }
-    .gallery-placeholder:nth-child(9)  { height: 220px; }
-    .gallery-placeholder:nth-child(10) { height: 180px; }
-    .gallery-placeholder:nth-child(11) { height: 240px; }
-    .gallery-placeholder:nth-child(12) { height: 200px; }
+    .gallery-item {
+      cursor: pointer;
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-001LP80CGR"></script>
@@ -100,111 +84,57 @@
         </div>
       </div>
 
-      <!-- Upload prompt -->
-      <div style="background: var(--bg-secondary); border: 2px dashed var(--border-color); border-radius: 12px; padding: 2rem; text-align: center; margin-bottom: 2rem;">
-        <i class="fa-solid fa-images" style="font-size: 2rem; color: var(--text-muted); display: block; margin-bottom: 0.75rem;"></i>
-        <p style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.25rem;">Add your photos</p>
-        <p style="font-size: 0.85rem; color: var(--text-muted);">
-          Place your images in <code style="background: var(--code-bg); padding: 0.15rem 0.4rem; border-radius: 4px; font-size:0.8rem;">assets/images/gallery/</code> and update the gallery items below.
-        </p>
-      </div>
-
-      <!-- Gallery grid with placeholder items -->
+      <!-- Gallery grid -->
       <div class="gallery-grid" id="gallery-grid">
 
         <div class="gallery-item" data-category="conference">
-          <div class="gallery-placeholder">
-            <i class="fa-solid fa-image"></i>
-            <span>Google I/O Extended 2026</span>
-          </div>
-        </div>
-
-        <div class="gallery-item" data-category="meetup">
-          <div class="gallery-placeholder">
-            <i class="fa-solid fa-image"></i>
-            <span>TensorFlow User Group KL</span>
-          </div>
-        </div>
-
-        <div class="gallery-item" data-category="workshop">
-          <div class="gallery-placeholder">
-            <i class="fa-solid fa-image"></i>
-            <span>ML Study Jam Workshop</span>
-          </div>
+          <img src="assets/images/gallery/Build with AI Singapore 2026.JPG" alt="Build with AI Singapore 2026" loading="lazy" />
         </div>
 
         <div class="gallery-item" data-category="conference">
-          <div class="gallery-placeholder">
-            <i class="fa-solid fa-image"></i>
-            <span>AWS Summit ASEAN 2025</span>
-          </div>
+          <img src="assets/images/gallery/Devfest Jakarta 2025.JPG" alt="DevFest Jakarta 2025" loading="lazy" />
         </div>
 
         <div class="gallery-item" data-category="conference">
-          <div class="gallery-placeholder">
-            <i class="fa-solid fa-image"></i>
-            <span>PyCon MY 2026</span>
-          </div>
-        </div>
-
-        <div class="gallery-item" data-category="meetup">
-          <div class="gallery-placeholder">
-            <i class="fa-solid fa-image"></i>
-            <span>GDG Cloud KL Meetup</span>
-          </div>
-        </div>
-
-        <div class="gallery-item" data-category="workshop">
-          <div class="gallery-placeholder">
-            <i class="fa-solid fa-image"></i>
-            <span>Gemini API Workshop</span>
-          </div>
+          <img src="assets/images/gallery/Google Connect China 2025.jpg" alt="Google Connect China 2025" loading="lazy" />
         </div>
 
         <div class="gallery-item" data-category="conference">
-          <div class="gallery-placeholder">
-            <i class="fa-solid fa-image"></i>
-            <span>Google Cloud Next Extended</span>
-          </div>
-        </div>
-
-        <div class="gallery-item" data-category="meetup">
-          <div class="gallery-placeholder">
-            <i class="fa-solid fa-image"></i>
-            <span>AWS Community Day SEA</span>
-          </div>
-        </div>
-
-        <div class="gallery-item" data-category="workshop">
-          <div class="gallery-placeholder">
-            <i class="fa-solid fa-image"></i>
-            <span>Kaggle Days Malaysia</span>
-          </div>
+          <img src="assets/images/gallery/DevFest Experts Bootcamp California 2024.jpg" alt="DevFest Experts Bootcamp California 2024" loading="lazy" />
         </div>
 
         <div class="gallery-item" data-category="conference">
-          <div class="gallery-placeholder">
-            <i class="fa-solid fa-image"></i>
-            <span>Malaysia Tech Week</span>
-          </div>
+          <img src="assets/images/gallery/DevFest Kuala Lumpur 2024.jpg" alt="DevFest Kuala Lumpur 2024" loading="lazy" />
+        </div>
+
+        <div class="gallery-item" data-category="conference">
+          <img src="assets/images/gallery/Google IO Connect 2024.JPG" alt="Google I/O Connect 2024" loading="lazy" />
+        </div>
+
+        <div class="gallery-item" data-category="conference">
+          <img src="assets/images/gallery/Google IO Extended Kuala Lumpur 2024.JPG" alt="Google I/O Extended Kuala Lumpur 2024" loading="lazy" />
+        </div>
+
+        <div class="gallery-item" data-category="conference">
+          <img src="assets/images/gallery/AI Summit 2024 - Budapest.JPG" alt="AI Summit 2024 Budapest" loading="lazy" />
+        </div>
+
+        <div class="gallery-item" data-category="conference">
+          <img src="assets/images/gallery/AI ML Community Summit Kazakhstan 2023.JPG" alt="AI/ML Community Summit Kazakhstan 2023" loading="lazy" />
+        </div>
+
+        <div class="gallery-item" data-category="conference">
+          <img src="assets/images/gallery/DevFest Cloud Bangkok 2023.jpg" alt="DevFest Cloud Bangkok 2023" loading="lazy" />
+        </div>
+
+        <div class="gallery-item" data-category="conference">
+          <img src="assets/images/gallery/Google IO Connect Beijing 2023.jpg" alt="Google I/O Connect Beijing 2023" loading="lazy" />
         </div>
 
         <div class="gallery-item" data-category="meetup">
-          <div class="gallery-placeholder">
-            <i class="fa-solid fa-image"></i>
-            <span>TFUG Community Event</span>
-          </div>
+          <img src="assets/images/gallery/AWS User Groups AI ML Kuala Lumpur.jpg" alt="AWS User Groups AI/ML Kuala Lumpur" loading="lazy" />
         </div>
 
-      </div>
-
-      <div style="margin-top: 2rem; padding: 1.25rem; background: var(--bg-secondary); border-radius: 10px; border: 1px solid var(--border-color);">
-        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;"><strong>How to add real photos:</strong></p>
-        <ol style="font-size: 0.85rem; color: var(--text-muted); padding-left: 1.25rem; line-height: 2;">
-          <li>Create an <code style="background: var(--code-bg); padding: 0.1rem 0.35rem; border-radius: 3px;">assets/images/gallery/</code> folder</li>
-          <li>Add your <code style="background: var(--code-bg); padding: 0.1rem 0.35rem; border-radius: 3px;">.jpg</code> / <code style="background: var(--code-bg); padding: 0.1rem 0.35rem; border-radius: 3px;">.webp</code> photos to it</li>
-          <li>Replace each <code style="background: var(--code-bg); padding: 0.1rem 0.35rem; border-radius: 3px;">.gallery-placeholder</code> div with <code style="background: var(--code-bg); padding: 0.1rem 0.35rem; border-radius: 3px;">&lt;img src="assets/images/gallery/photo.jpg" alt="..."&gt;</code></li>
-        </ol>
       </div>
     </div>
   </main>

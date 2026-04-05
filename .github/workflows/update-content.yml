@@ -1,0 +1,36 @@
+name: Update Site Content
+
+on:
+  repository_dispatch:
+    types: [new-content]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.CONTENT_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Update content
+        env:
+          PAYLOAD: ${{ toJson(github.event.client_payload) }}
+        run: python scripts/update_content.py
+
+      - name: Commit and push
+        run: |
+          git config user.email "kuanhoong@gmail.com"
+          git config user.name "Kuan Hoong"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto: ${{ github.event.client_payload.type }} — ${{ github.event.client_payload.title }}"
+            git push
+          fi

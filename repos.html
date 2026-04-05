@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Repos — Kuan Hoong</title>
+  <meta name="description" content="Top GitHub repositories by Kuan Hoong — open source projects in Machine Learning, AI, and Data Science." />
+  <link rel="icon" href="https://github.com/kuanhoong.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .repo-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.35rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .repo-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+    }
+    .repo-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    .repo-card-header i {
+      color: var(--text-muted);
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    .repo-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--accent);
+      word-break: break-word;
+    }
+    .repo-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .repo-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0.25rem;
+    }
+    .repo-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .repo-lang-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .lang-python     { background: #3572A5; }
+    .lang-jupyter    { background: #DA5B0B; }
+    .lang-r          { background: #198CE7; }
+    .lang-typescript { background: #3178C6; }
+    .lang-javascript { background: #F1E05A; }
+    .lang-html       { background: #E34C26; }
+    .lang-tex        { background: #3D6117; }
+    .lang-other      { background: #888; }
+    .repo-cta {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-001LP80CGR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-001LP80CGR');
+  </script>
+</head>
+<body>
+  <div id="progress-bar"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">Kuan<span>Hoong</span></a>
+    <ul class="navbar-nav">
+      <li><a href="index.html">About</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="podcast.html">Podcast</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="repos.html" class="active">Repos</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <div class="navbar-controls">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"><span id="theme-icon">🌙</span></button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="podcast.html">Podcast</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="trainings.html">Trainings</a></li>
+      <li><a href="repos.html">Repos</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>GitHub Repos</h1>
+        <p>Top open-source projects in Machine Learning, AI, and Data Science</p>
+      </div>
+
+      <div class="repo-grid">
+
+        <!-- 1 -->
+        <a class="repo-card" href="https://github.com/kuanhoong/mlstudyjam" target="_blank" rel="noopener">
+          <div class="repo-card-header">
+            <i class="fa-solid fa-book"></i>
+            <span class="repo-name">mlstudyjam</span>
+          </div>
+          <p class="repo-desc">Machine Learning Study Jam 2022 with Kaggle — notebooks and resources for hands-on ML learning.</p>
+          <div class="repo-meta">
+            <span><span class="repo-lang-dot lang-jupyter"></span> Jupyter Notebook</span>
+            <span><i class="fa-solid fa-star"></i> 24</span>
+            <span><i class="fa-solid fa-code-fork"></i> 10</span>
+          </div>
+        </a>
+
+        <!-- 2 -->
+        <a class="repo-card" href="https://github.com/kuanhoong/adk" target="_blank" rel="noopener">
+          <div class="repo-card-header">
+            <i class="fa-solid fa-book"></i>
+            <span class="repo-name">adk</span>
+          </div>
+          <p class="repo-desc">Agent Development Kit (ADK) — examples and demos built with Google's ADK framework for AI agents.</p>
+          <div class="repo-meta">
+            <span><span class="repo-lang-dot lang-python"></span> Python</span>
+            <span><i class="fa-solid fa-star"></i> 23</span>
+            <span><i class="fa-solid fa-code-fork"></i> 9</span>
+          </div>
+        </a>
+
+        <!-- 3 -->
+        <a class="repo-card" href="https://github.com/kuanhoong/FCI_FYP_Template" target="_blank" rel="noopener">
+          <div class="repo-card-header">
+            <i class="fa-solid fa-book"></i>
+            <span class="repo-name">FCI_FYP_Template</span>
+          </div>
+          <p class="repo-desc">Faculty of Computing and Informatics, Multimedia University — Final Year Project Report LaTeX Template.</p>
+          <div class="repo-meta">
+            <span><span class="repo-lang-dot lang-tex"></span> TeX</span>
+            <span><i class="fa-solid fa-star"></i> 18</span>
+            <span><i class="fa-solid fa-code-fork"></i> 12</span>
+          </div>
+        </a>
+
+        <!-- 4 -->
+        <a class="repo-card" href="https://github.com/kuanhoong/mcp" target="_blank" rel="noopener">
+          <div class="repo-card-header">
+            <i class="fa-solid fa-book"></i>
+            <span class="repo-name">mcp</span>
+          </div>
+          <p class="repo-desc">Model Context Protocol (MCP) server examples and integrations for AI-powered workflows.</p>
+          <div class="repo-meta">
+            <span><span class="repo-lang-dot lang-python"></span> Python</span>
+            <span><i class="fa-solid fa-star"></i> 12</span>
+            <span><i class="fa-solid fa-code-fork"></i> 7</span>
+          </div>
+        </a>
+
+        <!-- 5 -->
+        <a class="repo-card" href="https://github.com/kuanhoong/tensorflowusergroup" target="_blank" rel="noopener">
+          <div class="repo-card-header">
+            <i class="fa-solid fa-book"></i>
+            <span class="repo-name">tensorflowusergroup</span>
+          </div>
+          <p class="repo-desc">TensorFlow &amp; Deep Learning User Group Meetup — slides, notebooks, and code from community sessions.</p>
+          <div class="repo-meta">
+            <span><span class="repo-lang-dot lang-jupyter"></span> Jupyter Notebook</span>
+            <span><i class="fa-solid fa-star"></i> 6</span>
+            <span><i class="fa-solid fa-code-fork"></i> 3</span>
+          </div>
+        </a>
+
+        <!-- 6 -->
+        <a class="repo-card" href="https://github.com/kuanhoong/ggplot2_workshop" target="_blank" rel="noopener">
+          <div class="repo-card-header">
+            <i class="fa-solid fa-book"></i>
+            <span class="repo-name">ggplot2_workshop</span>
+          </div>
+          <p class="repo-desc">ggplot2 workshop materials — data visualisation with R and the Grammar of Graphics.</p>
+          <div class="repo-meta">
+            <span><span class="repo-lang-dot lang-r"></span> R</span>
+            <span><i class="fa-solid fa-star"></i> 5</span>
+            <span><i class="fa-solid fa-code-fork"></i> 0</span>
+          </div>
+        </a>
+
+        <!-- 7 -->
+        <a class="repo-card" href="https://github.com/kuanhoong/tensorboard_colab" target="_blank" rel="noopener">
+          <div class="repo-card-header">
+            <i class="fa-solid fa-book"></i>
+            <span class="repo-name">tensorboard_colab</span>
+          </div>
+          <p class="repo-desc">Setup TensorBoard with Google Colab — guide and notebooks for experiment tracking in the cloud.</p>
+          <div class="repo-meta">
+            <span><span class="repo-lang-dot lang-jupyter"></span> Jupyter Notebook</span>
+            <span><i class="fa-solid fa-star"></i> 5</span>
+            <span><i class="fa-solid fa-code-fork"></i> 0</span>
+          </div>
+        </a>
+
+        <!-- 8 -->
+        <a class="repo-card" href="https://github.com/kuanhoong/deeplearning-malaysia" target="_blank" rel="noopener">
+          <div class="repo-card-header">
+            <i class="fa-solid fa-book"></i>
+            <span class="repo-name">deeplearning-malaysia</span>
+          </div>
+          <p class="repo-desc">Deep Learning Malaysia Meetup (Feb 2017) — introductory materials and demos from an early community event.</p>
+          <div class="repo-meta">
+            <span><span class="repo-lang-dot lang-html"></span> HTML</span>
+            <span><i class="fa-solid fa-star"></i> 3</span>
+            <span><i class="fa-solid fa-code-fork"></i> 2</span>
+          </div>
+        </a>
+
+        <!-- 9 -->
+        <a class="repo-card" href="https://github.com/kuanhoong/churn-r" target="_blank" rel="noopener">
+          <div class="repo-card-header">
+            <i class="fa-solid fa-book"></i>
+            <span class="repo-name">churn-r</span>
+          </div>
+          <p class="repo-desc">Customer churn prediction with R — end-to-end classification pipeline using machine learning models.</p>
+          <div class="repo-meta">
+            <span><span class="repo-lang-dot lang-r"></span> R</span>
+            <span><i class="fa-solid fa-star"></i> 2</span>
+            <span><i class="fa-solid fa-code-fork"></i> 4</span>
+          </div>
+        </a>
+
+        <!-- 10 -->
+        <a class="repo-card" href="https://github.com/kuanhoong/EDS-Assignment3" target="_blank" rel="noopener">
+          <div class="repo-card-header">
+            <i class="fa-solid fa-book"></i>
+            <span class="repo-name">EDS-Assignment3</span>
+          </div>
+          <p class="repo-desc">Web Scraping Exercise — hands-on assignment covering data extraction techniques with Python.</p>
+          <div class="repo-meta">
+            <span><span class="repo-lang-dot lang-jupyter"></span> Jupyter Notebook</span>
+            <span><i class="fa-solid fa-star"></i> 1</span>
+            <span><i class="fa-solid fa-code-fork"></i> 19</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="repo-cta">
+        <a href="https://github.com/kuanhoong" target="_blank" rel="noopener" class="btn">
+          <i class="fa-brands fa-github"></i> View all repositories on GitHub
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-social">
+        <a href="https://github.com/kuanhoong" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/kuanhoong" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://twitter.com/kuanhoong" target="_blank" rel="noopener" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://bsky.app/profile/kuanhoong.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fa-solid fa-cloud"></i></a>
+        <a href="https://www.instagram.com/_kuanhoong_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.threads.com/@_kuanhoong_" target="_blank" rel="noopener" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+        <a href="https://www.facebook.com/kuanhoong" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+      <div class="footer-copyright">&copy; 2026 Kuan Hoong &nbsp;·&nbsp; <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

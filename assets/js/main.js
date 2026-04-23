@@ -84,6 +84,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Talk / cert filter tabs
+  function applyFilterGroupLimit(group) {
+    const maxVisible = Number(group.dataset.maxVisible || 0);
+    let visibleCount = 0;
+
+    group.querySelectorAll('[data-category]').forEach(item => {
+      if (item.style.display === 'none') return;
+      if (maxVisible > 0 && visibleCount >= maxVisible) {
+        item.style.display = 'none';
+        return;
+      }
+      visibleCount += 1;
+    });
+  }
+
+  document.querySelectorAll('[data-filter-group]').forEach(applyFilterGroupLimit);
+
   document.querySelectorAll('.filter-tab').forEach(tab => {
     tab.addEventListener('click', () => {
       const group = tab.closest('[data-filter-group]');
@@ -98,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
           item.style.display = 'none';
         }
       });
+      applyFilterGroupLimit(group);
     });
   });
 });

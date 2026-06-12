@@ -108,7 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tab.classList.add('active');
       const filter = tab.dataset.filter;
       group.querySelectorAll('[data-category]').forEach(item => {
-        if (filter === 'all' || item.dataset.category === filter) {
+        const categories = (item.dataset.category || '').split(/\s+/);
+        if (filter === 'all' || categories.includes(filter)) {
           item.style.display = '';
         } else {
           item.style.display = 'none';

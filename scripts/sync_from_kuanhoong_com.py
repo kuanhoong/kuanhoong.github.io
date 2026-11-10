@@ -5,7 +5,8 @@ GitHub Pages site.
 kuanhoong.com keeps its content as JSON in data/. This script reads those files
 and updates the hand-written HTML here:
 
-  talks.html      adds any talk that is not on this site yet (existing cards are left alone)
+  talks.html      adds any talk that is not on this site yet; for existing cards only
+                  the photo is refreshed when kuanhoong.com points to a different image
   blog.html       adds any Medium post that is not on this site yet
   index.html      rebuilds the "Recent Posts" table from the 5 newest posts
   trainings.html  rebuilds the training list from trainings.json
@@ -149,8 +150,19 @@ def sync_talks():
             mo = re.search(r'talk-month">(\w*)', chunk).group(1)
             ti = re.search(r'<h3>(.*?)</h3>', chunk, re.S).group(1)
             ev = re.search(r'talk-event">(.*?)</div>', chunk, re.S).group(1)
-            out.append(dict(pos=m.start(), key=(y, mo, norm(ti)), event=norm(ev)))
+            nxt = c.find('<div class="talk-card"', m.start() + 1)
+            body = c[m.start():nxt if nxt != -1 else len(c)]
+            img = re.search(r'<img class="talk-image" src="[^"]*"[^>]*/>', body)
+            out.append(dict(pos=m.start(), key=(y, mo, norm(ti)), event=norm(ev),
+                            img=img.group(0) if img else None,
+                            img_pos=m.start() + img.start() if img else None))
         return out
+
+    def img_stem(path):
+        # Compare images by file stem, ignoring extension, case and _ vs -,
+        # so an old .jpg here and the same photo as .webp there count as equal.
+        stem = os.path.splitext(os.path.basename(path or ''))[0]
+        return stem.lower().replace('_', '-')
 
     # Decide which source talks already exist. Same year+month+title can occur
     # more than once (same talk at different events), so match on counts and
@@ -160,6 +172,7 @@ def sync_talks():
     for c in cards:
         pool.setdefault(c['key'], []).append(c)
     present = []
+    replacements = []
     for t in src:
         key = (str(t['year']), t.get('month', ''), norm(t['title']))
         cands = pool.get(key, [])
@@ -170,6 +183,22 @@ def sync_talks():
         best = next((c for c in cands if c['event'] == ev or ev in c['event'] or c['event'] in ev), cands[0])
         cands.remove(best)
         present.append(True)
+        # Photo replaced on kuanhoong.com: point the existing card at the new image.
+        if best['img'] and t.get('image'):
+            cur = re.search(r'src="([^"]*)"', best['img']).group(1)
+            if img_stem(cur) != img_stem(t['image']):
+                new_src = copy_image(t['image'])
+                if new_src:
+                    alt = t.get('image_alt') or f'{t.get("event", "")}'
+                    new_tag = (f'<img class="talk-image" src="{esc(new_src)}" alt="{esc(alt)}" '
+                               f'loading="lazy" decoding="async" />')
+                    replacements.append((best['img_pos'], best['img'], new_tag))
+                    changes.append(f'talk photo: {t["year"]} {t.get("month", "")} {t["title"]} -> {new_src}')
+
+    # Apply photo swaps from the end of the file backwards so positions stay valid.
+    for pos, old_tag, new_tag in sorted(replacements, reverse=True):
+        assert content[pos:pos + len(old_tag)] == old_tag
+        content = content[:pos] + new_tag + content[pos + len(old_tag):]
 
     missing = [i for i, p in enumerate(present) if not p]
     for i in missing:
@@ -204,7 +233,7 @@ def sync_talks():
         present[i] = True
         changes.append(f'talk: {t["year"]} {t.get("month", "")} {t["title"]} ({t.get("event", "")})')
 
-    if missing:
+    if missing or replacements:
         write('talks.html', content)
 
 

@@ -153,10 +153,22 @@ def sync_talks():
             nxt = c.find('<div class="talk-card"', m.start() + 1)
             body = c[m.start():nxt if nxt != -1 else len(c)]
             img = re.search(r'<img class="talk-image" src="[^"]*"[^>]*/>', body)
-            out.append(dict(pos=m.start(), key=(y, mo, norm(ti)), event=norm(ev),
+            end = card_end(c, m.start())
+            out.append(dict(pos=m.start(), end=end, key=(y, mo, norm(ti)), event=norm(ev),
+                            title=html.unescape(ti).strip(),
+                            urls=set(re.findall(r'href="([^"]+)"', c[m.start():end])),
                             img=img.group(0) if img else None,
                             img_pos=m.start() + img.start() if img else None))
         return out
+
+    def card_end(c, start):
+        # Index just past the </div> that closes the talk-card opened at start.
+        depth = 0
+        for t in re.finditer(r'<div\b|</div>', c[start:]):
+            depth += 1 if t.group(0) == '<div' else -1
+            if depth == 0:
+                return start + t.end()
+        return len(c)
 
     def img_stem(path):
         # Compare images by file stem, ignoring extension, case and _ vs -,
@@ -201,6 +213,27 @@ def sync_talks():
         content = content[:pos] + new_tag + content[pos + len(old_tag):]
 
     missing = [i for i, p in enumerate(present) if not p]
+
+    # A talk renamed or re-dated on kuanhoong.com shows up as "missing" while its
+    # old card here is left with no source entry. If such an orphan card shares a
+    # link URL with a missing talk, it is the same talk: drop the old card so the
+    # new one replaces it instead of duplicating it.
+    orphans = [c for cs in pool.values() for c in cs]
+    removed = []
+    for i in missing:
+        urls = {l.get('url') for l in src[i].get('links') or [] if l.get('url')}
+        hit = next((o for o in orphans if o['urls'] & urls), None)
+        if hit:
+            orphans.remove(hit)
+            removed.append(hit)
+            changes.append(f'talk replaced: {hit["key"][0]} {hit["key"][1]} {hit["title"]} '
+                           f'-> {src[i]["year"]} {src[i].get("month", "")} {src[i]["title"]}')
+    for o in removed:
+        # Positions shifted if photos were swapped; find the card again by identity.
+        cur = next(c for c in existing_cards(content) if c['key'] == o['key'] and c['urls'] == o['urls'])
+        tail = len(content[cur['end']:]) - len(content[cur['end']:].lstrip())
+        content = content[:cur['pos']] + content[cur['end'] + tail:]
+
     for i in missing:
         t = src[i]
         card = talk_card(t)
@@ -217,7 +250,8 @@ def sync_talks():
         year = str(t['year'])
         year_marker = f'<!-- {year} '
         if anchor_pos is not None and anchor_year == year:
-            content = content[:anchor_pos] + card + '\n\n          ' + content[anchor_pos:]
+            # anchor_pos is already indented, so drop the card's own leading indent.
+            content = content[:anchor_pos] + card.lstrip() + '\n\n          ' + content[anchor_pos:]
         elif year_marker in content:
             # Year section exists but no later card in it: append at the end of the section.
             start = content.find(year_marker)
@@ -233,7 +267,7 @@ def sync_talks():
         present[i] = True
         changes.append(f'talk: {t["year"]} {t.get("month", "")} {t["title"]} ({t.get("event", "")})')
 
-    if missing or replacements:
+    if missing or replacements or removed:
         write('talks.html', content)
 
 
